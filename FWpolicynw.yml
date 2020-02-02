@@ -3,7 +3,7 @@
   vars:
     host: "192.168.1.100"
     username: "idesilva"
-    password: "Rabutan2@"
+    password: ""
     vdom: "root"
     ssl_verify: "false"
   tasks:
