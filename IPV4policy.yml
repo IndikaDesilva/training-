@@ -7,15 +7,15 @@
         fortios_ipv4_policy:
           id: 4 # required. Policy ID. Warning: policy ID number is different than Policy sequence number. The policy ID is the number assigned at policy creation. The sequence number represents the order in which the Fortigate will evaluate the rule for policy enforcement, and also the order in which rules are listed in the GUI and CLI. These two numbers do not necessarily correlate: this module is based off policy ID. TIP: policy ID can be viewed in the GUI by adding 'ID' to the display columns
           comment: "Ansible test" # not required. free text to describe policy.
-          username: idesilva # not required. Configures the username used to authenticate to the remote device. Required when I(file_mode) is True.
+          username: # not required. Configures the username used to authenticate to the remote device. Required when I(file_mode) is True.
           src_intf: any # not required. Specifies source interface name(s).
-          password: "Rabutan12@" # not required. Specifies the password used to authenticate to the remote device. Required when I(file_mode) is True.
+          password: "" # not required. Specifies the password used to authenticate to the remote device. Required when I(file_mode) is True.
           src_addr: 10.1.209.0/24 # not required. Specifies source address (or group) object name(s). Required when I(state=present).
           service: https # not required. Specifies policy service(s), could be a list (ex: ['MAIL','DNS']). Required when I(state=present).
           policy_action: accept # not required. choices: accept;deny. Specifies accept or deny action policy. Required when I(state=present).
           dst_intf: any # not required. Specifies destination interface name(s).
           state: present # not required. choices: present;absent. Specifies if policy I(id) need to be added or deleted.
-          vdom: "Proxy" # not required. Specifies on which vdom to apply configuration
+          vdom: "" # not required. Specifies on which vdom to apply configuration
           nat: false # not required. Enable or disable Nat.
           backup: false # not required. This argument will cause the module to create a backup of the current C(running-config) from the remote device before any changes are made.  The backup file is written to the i(backup) folder.
           dst_addr: 10.0.0.0/0 # not required. Specifies destination address (or group) object name(s). Required when I(state=present).
