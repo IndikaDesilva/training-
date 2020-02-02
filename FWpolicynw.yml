@@ -1,0 +1,27 @@
+---
+  - hosts: localhost
+    vars:
+      host: "192.168.1.100"
+      username: "idesilva"
+      password: "Rabutan2@"
+      vdom: "root"
+      ssl_verify: "false"
+    tasks:
+      fortios_firewall_policy:
+        host: "{{ host }}"
+        password: "{{ password }}"
+        vdom: "root"
+        https: "True"
+        ssl_verify: "False"
+        firewall_policy:
+          state: "present"
+          srcintf: "any"
+          srcaddr: "all"
+          dstaddr: "all"
+          schedule: "always"
+          service: "all"
+          action: "accept"
+          nat: "disable"
+          status: "enable"
+          policyid: "9"
+          name: "ansible_test"
