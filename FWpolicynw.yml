@@ -2,7 +2,7 @@
 - hosts: localhost
   vars:
     host: "192.168.1.100"
-    username: "idesilva"
+    username: ""
     password: ""
     vdom: "root"
     ssl_verify: "false"
