@@ -1,0 +1,14 @@
+---
+  - hosts: localhost
+    vars: 
+      host: ""
+      username: ""
+      password: ""
+    tasks:
+      - name: create local user
+        win_user: 
+          name: 
+          password: ""
+          group: "LocalGroup"
+          update_password: no
+          password_never_expires: yes
