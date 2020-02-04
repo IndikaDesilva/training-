@@ -1,0 +1,10 @@
+---
+  - hosts: localhost
+    become: true
+    vars: 
+      host: 
+      username: 
+      password: 
+    tasks:
+      - name: Install packages 
+        apt: name=mysql-server state=present update_cache=yes
