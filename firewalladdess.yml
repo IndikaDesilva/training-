@@ -1,0 +1,22 @@
+---
+  - hosts: localhost
+    vars: 
+      host: "192.168.1.100"
+      username: ""
+      password: ""
+      vdom: "root"
+      ssl_verify: "False"
+    tasks:
+      - name: Adding firewall address for VLAN_100
+        fortios_firewall_address:
+          name: "ansibletest"
+          firewall_address:
+            state: "present"
+            type: "ipmask"
+            subnet: "10.125.1.0 255.255.255.0"
+          host: "192.168.1.100"
+          username: "{{ username }}"
+          password: "{{ password }}"
+          vdom: "{{ vdom }}"
+          https: true
+          ssl_verify: "False"
